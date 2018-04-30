@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/pic">
+        <file>src/pic/welcome.png</file>
+    </qresource>
+    <qresource prefix="/chessboard">
+        <file>src/pic/wood.png</file>
+        <file>src/pic/beach.png</file>
+        <file>src/pic/starry.png</file>
+    </qresource>
+    <qresource prefix="/chesspiece">
+        <file>src/pic/black.png</file>
+        <file>src/pic/white.png</file>
+    </qresource>
+</RCC>

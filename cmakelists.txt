@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.7)
+project(ChineseChess)
+
+set(CMAKE_CXX_STANDARD 11)
+
+set(SOURCE_FILES Any.h command.h Model/AI.cpp ChessBoard.h ViewModel/ViewModel.cpp ViewModel/ViewModel.h Model/Model.cpp Model/Model.h Model/AI.h Observer.cpp Observer.h TestGame.cpp TestGame.h ViewModel/Commands/StartCommand.cpp ViewModel/Commands/StartCommand.h ViewModel/Commands/DerivedCommand.cpp ViewModel/Commands/DerivedCommand.h ViewModel/Commands/PossibleMoveCommand.cpp ViewModel/Commands/PossibleMoveCommand.h ViewModel/Commands/MoveCommand.cpp ViewModel/Commands/MoveCommand.h)
+add_executable(ChineseChess ${SOURCE_FILES})

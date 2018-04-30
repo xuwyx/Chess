@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/help">
+        <file>src/help/rule0.png</file>
+        <file>src/help/rule1.png</file>
+        <file>src/help/rule2.png</file>
+        <file>src/help/rule3.png</file>
+        <file>src/help/rule4.png</file>
+    </qresource>
+</RCC>

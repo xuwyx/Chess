@@ -1,0 +1,1374 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+		5E618435888B9D49F8540165 = {
+			buildActionMask = 2147483647;
+			files = (
+				);
+			isa = PBXShellScriptBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+			name = "Qt Qmake";
+			shellPath = "/bin/sh";
+			shellScript = "make -C /Users/xwy/Desktop/Study/AI/Chess -f qt_makeqmake.mak";
+			showEnvVarsInLog = "0";
+		};
+		42BB088932C567DB13CC0E13 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/main.cpp";
+			name = "main.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		DF6DFBABA1DAC07E85F4B0A8 = {
+			fileRef = "42BB088932C567DB13CC0E13";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		A4B30E53160435FF54AC2092 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/Observer.cpp";
+			name = "Observer.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		A97C2E669F3584D5C1B1CB29 = {
+			fileRef = "A4B30E53160435FF54AC2092";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		BCBBE5B5E1F326F34F2F6B49 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/TestGame.cpp";
+			name = "TestGame.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		189AF242194E97B8A81FB735 = {
+			fileRef = "BCBBE5B5E1F326F34F2F6B49";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		E407960A774B361E03D91D64 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/control.cpp";
+			name = "control.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		79710C6BDE22D2757591C61C = {
+			fileRef = "E407960A774B361E03D91D64";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		2986BC155F0827116ABB08B1 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/Model/AI.cpp";
+			name = "AI.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		9868315564361265892E42E3 = {
+			fileRef = "2986BC155F0827116ABB08B1";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		B5B74451F0D4B6D62E5B98E1 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/Model/Model.cpp";
+			name = "Model.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		DEE7F1D66FA71F948E4DE546 = {
+			fileRef = "B5B74451F0D4B6D62E5B98E1";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		FCB64271DA13D6C95D792026 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/View/chesspieces.cpp";
+			name = "chesspieces.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		C12E1B94372C5073365DEE02 = {
+			fileRef = "FCB64271DA13D6C95D792026";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		EB153857B74D63E9721E6398 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/View/getpkmode.cpp";
+			name = "getpkmode.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		5F1F26939EE44C29208054C9 = {
+			fileRef = "EB153857B74D63E9721E6398";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		804B5AC60934E9B2C0F70220 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/View/m1_welcome.cpp";
+			name = "m1_welcome.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		8A890E87565DE93A71782A8D = {
+			fileRef = "804B5AC60934E9B2C0F70220";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		3A7C58581CFA05313B458F1F = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/View/mainwindow.cpp";
+			name = "mainwindow.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		F78DDF485703FB416BD1F05B = {
+			fileRef = "3A7C58581CFA05313B458F1F";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		9A7357D5C42FE265FC7A4248 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/View/sleep.cpp";
+			name = "sleep.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		21B3A29AEBE9C2B50A4C3487 = {
+			fileRef = "9A7357D5C42FE265FC7A4248";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		F249EF8FE60B5D766AB0F462 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/View/view.cpp";
+			name = "view.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		2435329206E1411C90072EEA = {
+			fileRef = "F249EF8FE60B5D766AB0F462";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		80FD8B3C001D4BCB46D2B25B = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/View/viewchessboard.cpp";
+			name = "viewchessboard.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		06B7A2A1F925D49EF43CD110 = {
+			fileRef = "80FD8B3C001D4BCB46D2B25B";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		AA8349686EDBACCFA4319AB8 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/ViewModel/ViewModel.cpp";
+			name = "ViewModel.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		8E0FFF5808A62BB199C0C8F9 = {
+			fileRef = "AA8349686EDBACCFA4319AB8";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		8975A4DD2231761DB2FD439A = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/ViewModel/Commands/MoveCommand.cpp";
+			name = "MoveCommand.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		52037D106BA9496308FD2EFC = {
+			fileRef = "8975A4DD2231761DB2FD439A";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		1E9601DEB447832AB763FA9B = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/ViewModel/Commands/PossibleMoveCommand.cpp";
+			name = "PossibleMoveCommand.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		906213E50656F81231A305D9 = {
+			fileRef = "1E9601DEB447832AB763FA9B";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		3D9D5BF4FC8C5A8660992C43 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/ViewModel/Commands/StartCommand.cpp";
+			name = "StartCommand.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		CCDFAEB425248082DE4D214C = {
+			fileRef = "3D9D5BF4FC8C5A8660992C43";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		7A43BCEE0E6DA5118476F96A = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/Model/ai_test.cpp";
+			name = "ai_test.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		023DD4C248C5552BB2C97CC1 = {
+			fileRef = "7A43BCEE0E6DA5118476F96A";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		F5BFF64432123A3C6FFB755B = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/qrc_pic.cpp";
+			name = "qrc_pic.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		39D12189969C0BDA10A8C752 = {
+			fileRef = "F5BFF64432123A3C6FFB755B";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		BECC204695D6872FAA16C2BD = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/qrc_help.cpp";
+			name = "qrc_help.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		24373ADB3942515EDC7F6AFA = {
+			fileRef = "BECC204695D6872FAA16C2BD";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		F215DB1F698B9A9C10985FF2 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/qrc_value.cpp";
+			name = "qrc_value.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		367E52E23394058768A185AA = {
+			fileRef = "F215DB1F698B9A9C10985FF2";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		AFECBA8C9C3D0F0AD2B96DD9 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/moc_Model.cpp";
+			name = "moc_Model.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		696571ADF12FBD363920251A = {
+			fileRef = "AFECBA8C9C3D0F0AD2B96DD9";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		A3317FC4526F0C1C53AAC7E4 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/moc_chesspieces.cpp";
+			name = "moc_chesspieces.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		22DD2CBB750496DB21E7A304 = {
+			fileRef = "A3317FC4526F0C1C53AAC7E4";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		D764F5CD5225670619B3F040 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/moc_getpkmode.cpp";
+			name = "moc_getpkmode.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		799DAA5C5EEBBA4F747DDBB2 = {
+			fileRef = "D764F5CD5225670619B3F040";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		6268C5BCBE946B2B133275E0 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/moc_m1_welcome.cpp";
+			name = "moc_m1_welcome.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		5F58A073C19082E38716E120 = {
+			fileRef = "6268C5BCBE946B2B133275E0";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		703267ECA4E23F249091CB4A = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/moc_mainwindow.cpp";
+			name = "moc_mainwindow.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		1BA503CA1B3DD4D33AE2B854 = {
+			fileRef = "703267ECA4E23F249091CB4A";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		E2CD38E800B0E0F1954980A4 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/moc_viewchessboard.cpp";
+			name = "moc_viewchessboard.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		86B75047729CDF45C1901D38 = {
+			fileRef = "E2CD38E800B0E0F1954980A4";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		B0B51BEC9CE01558E69CDF85 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/ui_chesspieces.h";
+			name = "ui_chesspieces.h";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.c.h";
+		};
+		4575B9CA9508EBF5E8DAEDA1 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/ui_getpkmode.h";
+			name = "ui_getpkmode.h";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.c.h";
+		};
+		58E10A05520263689B659B70 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/ui_m1_welcome.h";
+			name = "ui_m1_welcome.h";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.c.h";
+		};
+		B936C20661BD0E54167BA042 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/ui_mainwindow.h";
+			name = "ui_mainwindow.h";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.c.h";
+		};
+		AF8B6BE8165178C092144766 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/ui_viewchessboard.h";
+			name = "ui_viewchessboard.h";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.c.h";
+		};
+		29C3535835B7FC72FA236B64 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/ChessBoard.h";
+			name = "ChessBoard.h";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.c.h";
+		};
+		4E342D05C15E3295113AEC61 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/command.h";
+			name = "command.h";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.c.h";
+		};
+		452E70EAA0629F038A56F1CC = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/Observer.h";
+			name = "Observer.h";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.c.h";
+		};
+		E1DAE2CB1193193062384058 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/TestGame.h";
+			name = "TestGame.h";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.c.h";
+		};
+		EE96E213453E3095CF896E1D = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/control.h";
+			name = "control.h";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.c.h";
+		};
+		1C975D29D1B50010B5D6F4B9 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/Any.h";
+			name = "Any.h";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.c.h";
+		};
+		E92D58A7158C3DFF852B5F77 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/Model/AI.h";
+			name = "AI.h";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.c.h";
+		};
+		14F9776A04DEEDA935D1D695 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/Model/Model.h";
+			name = "Model.h";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.c.h";
+		};
+		E9C4B3D9AD301A2C43F811A7 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/View/chesspieces.h";
+			name = "chesspieces.h";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.c.h";
+		};
+		F0557E0FFD982821F7097AB9 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/View/getpkmode.h";
+			name = "getpkmode.h";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.c.h";
+		};
+		C177B725B0162FABFF69B1DA = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/View/m1_welcome.h";
+			name = "m1_welcome.h";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.c.h";
+		};
+		ACE98A989170F498E13BDC9C = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/View/mainwindow.h";
+			name = "mainwindow.h";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.c.h";
+		};
+		9884E9B2374266B9DFA46B20 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/View/sleep.h";
+			name = "sleep.h";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.c.h";
+		};
+		706AD5CCEFC89E64273352A4 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/View/view.h";
+			name = "view.h";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.c.h";
+		};
+		446316D44D6D35281DF3F114 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/View/viewchessboard.h";
+			name = "viewchessboard.h";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.c.h";
+		};
+		3DCC7BA0544F9094A8AA37E3 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/ViewModel/ViewModel.h";
+			name = "ViewModel.h";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.c.h";
+		};
+		F4399E4F5D9BC78AD14451E5 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/ViewModel/Commands/DerivedCommand.h";
+			name = "DerivedCommand.h";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.c.h";
+		};
+		70CF72666FB1CD9944A7E120 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/ViewModel/Commands/MoveCommand.h";
+			name = "MoveCommand.h";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.c.h";
+		};
+		51A4EED74D55D92324D89D3C = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/ViewModel/Commands/PossibleMoveCommand.h";
+			name = "PossibleMoveCommand.h";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.c.h";
+		};
+		972FF25BBF31A251E54399FE = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/ViewModel/Commands/StartCommand.h";
+			name = "StartCommand.h";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.c.h";
+		};
+		48090F18B1B6A3DBC9BBB785 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/possiblemoveposition.h";
+			name = "possiblemoveposition.h";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.c.h";
+		};
+		85B607CE3DA0FD02DF457929 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/Model/ai_test.h";
+			name = "ai_test.h";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.c.h";
+		};
+		CD12DAE226295DD33F8B6C7A = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/pic.qrc";
+			name = "pic.qrc";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "text";
+		};
+		27839E600DAD21950359D1E0 = {
+			fileRef = "CD12DAE226295DD33F8B6C7A";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		B6DBFA8214861B6A9CABC764 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/help.qrc";
+			name = "help.qrc";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "text";
+		};
+		28CE274D765717C7A8D84408 = {
+			fileRef = "B6DBFA8214861B6A9CABC764";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		08ADE6211F31668C640097F3 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/value.qrc";
+			name = "value.qrc";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "text";
+		};
+		8A91424E2F8F69459211A537 = {
+			fileRef = "08ADE6211F31668C640097F3";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		B88FC66722A2FF8E00D4A374 = {
+			isa = PBXFileReference;
+			path = "/usr/local/Cellar/qt/5.10.1/mkspecs/features/data/dummy.cpp";
+			name = "dummy.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		65AD1B28ABCCD29E8EAB0F13 = {
+			fileRef = "B88FC66722A2FF8E00D4A374";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		D02971EC9D5BB552E332E910 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/View/chesspieces.ui";
+			name = "chesspieces.ui";
+			sourceTree = "<absolute>";
+		};
+		703F265200E5F6CA4B8FC0F7 = {
+			fileRef = "D02971EC9D5BB552E332E910";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		4291B55223328A7AFCA77CA9 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/View/getpkmode.ui";
+			name = "getpkmode.ui";
+			sourceTree = "<absolute>";
+		};
+		B60D0477613289C98DE04D2C = {
+			fileRef = "4291B55223328A7AFCA77CA9";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		BB2F4E1E198F987B8A5C911D = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/View/m1_welcome.ui";
+			name = "m1_welcome.ui";
+			sourceTree = "<absolute>";
+		};
+		78A01CD6E125601548898CDF = {
+			fileRef = "BB2F4E1E198F987B8A5C911D";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		A42A38422B35FFDCB0A3EE03 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/View/mainwindow.ui";
+			name = "mainwindow.ui";
+			sourceTree = "<absolute>";
+		};
+		D42A7E3E5CC8B5639022DAB2 = {
+			fileRef = "A42A38422B35FFDCB0A3EE03";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		524682F58C3371E400CF4D17 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/View/viewchessboard.ui";
+			name = "viewchessboard.ui";
+			sourceTree = "<absolute>";
+		};
+		5E28BF0D9F90108986BA2D5F = {
+			fileRef = "524682F58C3371E400CF4D17";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		56B1795AB2C047969D89E12A = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/ChineseChessFour.pro";
+			name = "ChineseChessFour.pro";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "text";
+		};
+		18918462E311FB1978F806D1 = {
+			isa = PBXFileReference;
+			path = "/Users/xwy/Desktop/Study/AI/Chess/.qmake.stash";
+			name = ".qmake.stash";
+			sourceTree = "<absolute>";
+		};
+		25B08E2869634E9BCBA333A2 = {
+			isa = PBXGroup;
+			children = (
+				"F5BFF64432123A3C6FFB755B",
+				"BECC204695D6872FAA16C2BD",
+				"F215DB1F698B9A9C10985FF2",
+				"AFECBA8C9C3D0F0AD2B96DD9",
+				"A3317FC4526F0C1C53AAC7E4",
+				"D764F5CD5225670619B3F040",
+				"6268C5BCBE946B2B133275E0",
+				"703267ECA4E23F249091CB4A",
+				"E2CD38E800B0E0F1954980A4",
+				"B0B51BEC9CE01558E69CDF85",
+				"4575B9CA9508EBF5E8DAEDA1",
+				"58E10A05520263689B659B70",
+				"B936C20661BD0E54167BA042",
+				"AF8B6BE8165178C092144766");
+			name = "Generated Sources";
+			sourceTree = "<group>";
+		};
+		81375CCDDB983C34F3D76348 = {
+			isa = PBXGroup;
+			children = (
+				"D02971EC9D5BB552E332E910",
+				"4291B55223328A7AFCA77CA9",
+				"BB2F4E1E198F987B8A5C911D",
+				"A42A38422B35FFDCB0A3EE03",
+				"524682F58C3371E400CF4D17");
+			name = "View";
+			sourceTree = "<group>";
+		};
+		39F5AEF884E0E2D1EAD32E36 = {
+			isa = PBXGroup;
+			children = (
+				"2986BC155F0827116ABB08B1",
+				"B5B74451F0D4B6D62E5B98E1",
+				"7A43BCEE0E6DA5118476F96A",
+				"E92D58A7158C3DFF852B5F77",
+				"14F9776A04DEEDA935D1D695",
+				"85B607CE3DA0FD02DF457929");
+			name = "Model";
+			sourceTree = "<group>";
+		};
+		06AF62BB5A554CC624D88C75 = {
+			isa = PBXGroup;
+			children = (
+				"FCB64271DA13D6C95D792026",
+				"EB153857B74D63E9721E6398",
+				"804B5AC60934E9B2C0F70220",
+				"3A7C58581CFA05313B458F1F",
+				"9A7357D5C42FE265FC7A4248",
+				"F249EF8FE60B5D766AB0F462",
+				"80FD8B3C001D4BCB46D2B25B",
+				"E9C4B3D9AD301A2C43F811A7",
+				"F0557E0FFD982821F7097AB9",
+				"C177B725B0162FABFF69B1DA",
+				"ACE98A989170F498E13BDC9C",
+				"9884E9B2374266B9DFA46B20",
+				"706AD5CCEFC89E64273352A4",
+				"446316D44D6D35281DF3F114");
+			name = "View";
+			sourceTree = "<group>";
+		};
+		047D0786EF158FD455515B45 = {
+			isa = PBXGroup;
+			children = (
+				"AA8349686EDBACCFA4319AB8",
+				"D2D5677AFD549C7B8DF6F35E",
+				"3DCC7BA0544F9094A8AA37E3");
+			name = "ViewModel";
+			sourceTree = "<group>";
+		};
+		D2D5677AFD549C7B8DF6F35E = {
+			isa = PBXGroup;
+			children = (
+				"8975A4DD2231761DB2FD439A",
+				"1E9601DEB447832AB763FA9B",
+				"3D9D5BF4FC8C5A8660992C43",
+				"F4399E4F5D9BC78AD14451E5",
+				"70CF72666FB1CD9944A7E120",
+				"51A4EED74D55D92324D89D3C",
+				"972FF25BBF31A251E54399FE");
+			name = "Commands";
+			sourceTree = "<group>";
+		};
+		87DF60DE337FB58864343E39 = {
+			isa = PBXGroup;
+			children = (
+				"CD12DAE226295DD33F8B6C7A",
+				"B6DBFA8214861B6A9CABC764",
+				"08ADE6211F31668C640097F3");
+			name = "Resources";
+			sourceTree = "<group>";
+		};
+		2EB56BE3C2D93CDAB0C52E67 = {
+			isa = PBXGroup;
+			children = (
+				"42BB088932C567DB13CC0E13",
+				"A4B30E53160435FF54AC2092",
+				"BCBBE5B5E1F326F34F2F6B49",
+				"E407960A774B361E03D91D64",
+				"39F5AEF884E0E2D1EAD32E36",
+				"06AF62BB5A554CC624D88C75",
+				"047D0786EF158FD455515B45",
+				"29C3535835B7FC72FA236B64",
+				"4E342D05C15E3295113AEC61",
+				"452E70EAA0629F038A56F1CC",
+				"E1DAE2CB1193193062384058",
+				"EE96E213453E3095CF896E1D",
+				"1C975D29D1B50010B5D6F4B9",
+				"48090F18B1B6A3DBC9BBB785");
+			name = "Sources";
+			sourceTree = "<group>";
+		};
+		B8254625CFD509ED2A24A166 = {
+			isa = PBXGroup;
+			children = (
+				"B88FC66722A2FF8E00D4A374");
+			name = "Sources [moc_predefs]";
+			sourceTree = "<group>";
+		};
+		12E908B8A1C3C07C115504F5 = {
+			isa = PBXGroup;
+			children = (
+				"81375CCDDB983C34F3D76348");
+			name = "Sources [uic]";
+			sourceTree = "<group>";
+		};
+		74B182DB50CB5611B5C1C297 = {
+			isa = PBXGroup;
+			children = (
+				"56B1795AB2C047969D89E12A",
+				"18918462E311FB1978F806D1");
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7EF0942E79C014DCEC8976BC = {
+			buildActionMask = 2147483647;
+			files = (
+				);
+			isa = PBXShellScriptBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+			name = "Qt Preprocessors";
+			shellPath = "/bin/sh";
+			shellScript = "make -C /Users/xwy/Desktop/Study/AI/Chess -f qt_preprocess.mak";
+			showEnvVarsInLog = "0";
+		};
+		F7E50F631C51CD5B5DC0BC43 = {
+			buildActionMask = 2147483647;
+			files = (
+				"DF6DFBABA1DAC07E85F4B0A8",
+				"A97C2E669F3584D5C1B1CB29",
+				"189AF242194E97B8A81FB735",
+				"79710C6BDE22D2757591C61C",
+				"9868315564361265892E42E3",
+				"DEE7F1D66FA71F948E4DE546",
+				"C12E1B94372C5073365DEE02",
+				"5F1F26939EE44C29208054C9",
+				"8A890E87565DE93A71782A8D",
+				"F78DDF485703FB416BD1F05B",
+				"21B3A29AEBE9C2B50A4C3487",
+				"2435329206E1411C90072EEA",
+				"06B7A2A1F925D49EF43CD110",
+				"8E0FFF5808A62BB199C0C8F9",
+				"52037D106BA9496308FD2EFC",
+				"906213E50656F81231A305D9",
+				"CCDFAEB425248082DE4D214C",
+				"023DD4C248C5552BB2C97CC1",
+				"39D12189969C0BDA10A8C752",
+				"24373ADB3942515EDC7F6AFA",
+				"367E52E23394058768A185AA",
+				"696571ADF12FBD363920251A",
+				"22DD2CBB750496DB21E7A304",
+				"799DAA5C5EEBBA4F747DDBB2",
+				"5F58A073C19082E38716E120",
+				"1BA503CA1B3DD4D33AE2B854",
+				"86B75047729CDF45C1901D38",
+				"65AD1B28ABCCD29E8EAB0F13");
+			isa = PBXSourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+			name = "Compile Sources";
+		};
+		4372A626687FE2261D849DD3 = {
+			isa = PBXFileReference;
+			name = "QtWidgets.framework";
+			path = "/usr/local/Cellar/qt/5.10.1/lib/QtWidgets.framework";
+			refType = 0;
+			sourceTree = "<absolute>";
+			lastKnownFileType = "wrapper.framework";
+		};
+		1D7D940EB2C439A08BD9A01E = {
+			fileRef = "4372A626687FE2261D849DD3";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		AF433BB9A3A7CB1B806A5FEC = {
+			isa = PBXFileReference;
+			name = "QtGui.framework";
+			path = "/usr/local/Cellar/qt/5.10.1/lib/QtGui.framework";
+			refType = 0;
+			sourceTree = "<absolute>";
+			lastKnownFileType = "wrapper.framework";
+		};
+		C3947747999C0637497AB4D9 = {
+			fileRef = "AF433BB9A3A7CB1B806A5FEC";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		090032431A010D1C08B31DCE = {
+			isa = PBXFileReference;
+			name = "QtCore.framework";
+			path = "/usr/local/Cellar/qt/5.10.1/lib/QtCore.framework";
+			refType = 0;
+			sourceTree = "<absolute>";
+			lastKnownFileType = "wrapper.framework";
+		};
+		2F2C9D3695FD20AE762F6D8A = {
+			fileRef = "090032431A010D1C08B31DCE";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		2B774D8E4178765CE52EAAF5 = {
+			isa = PBXFileReference;
+			name = "DiskArbitration.framework";
+			path = "/System/Library/Frameworks/DiskArbitration.framework";
+			refType = 0;
+			sourceTree = "<absolute>";
+			lastKnownFileType = "wrapper.framework";
+		};
+		A99B2AA0F9CBBDD12BA126A4 = {
+			fileRef = "2B774D8E4178765CE52EAAF5";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A1A67BEAA744704B29168D39 = {
+			isa = PBXFileReference;
+			name = "IOKit.framework";
+			path = "/System/Library/Frameworks/IOKit.framework";
+			refType = 0;
+			sourceTree = "<absolute>";
+			lastKnownFileType = "wrapper.framework";
+		};
+		8D267F2E4776F0ECA2F49DC8 = {
+			fileRef = "A1A67BEAA744704B29168D39";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		D0DA2AB22A817C6D495064C3 = {
+			isa = PBXFileReference;
+			name = "QtNetwork.framework";
+			path = "/usr/local/Cellar/qt/5.10.1/lib/QtNetwork.framework";
+			refType = 0;
+			sourceTree = "<absolute>";
+			lastKnownFileType = "wrapper.framework";
+		};
+		CE4DA5F72ED0FF02A698FF3A = {
+			fileRef = "D0DA2AB22A817C6D495064C3";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		D4B32C2222F82AC56BADEB21 = {
+			isa = PBXFileReference;
+			name = "OpenGL.framework";
+			path = "/System/Library/Frameworks/OpenGL.framework";
+			refType = 0;
+			sourceTree = "<absolute>";
+			lastKnownFileType = "wrapper.framework";
+		};
+		8771A8C96E9C391044035D99 = {
+			fileRef = "D4B32C2222F82AC56BADEB21";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		8D9815BDB5BD9F90D2BC05C5 = {
+			isa = PBXFileReference;
+			name = "AGL.framework";
+			path = "/System/Library/Frameworks/AGL.framework";
+			refType = 0;
+			sourceTree = "<absolute>";
+			lastKnownFileType = "wrapper.framework";
+		};
+		E45E51A644D5FC9F942ECE55 = {
+			fileRef = "8D9815BDB5BD9F90D2BC05C5";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		AF39DD055C3EF8226FBE929D = {
+			children = (
+				"4372A626687FE2261D849DD3",
+				"AF433BB9A3A7CB1B806A5FEC",
+				"090032431A010D1C08B31DCE",
+				"2B774D8E4178765CE52EAAF5",
+				"A1A67BEAA744704B29168D39",
+				"D0DA2AB22A817C6D495064C3",
+				"D4B32C2222F82AC56BADEB21",
+				"8D9815BDB5BD9F90D2BC05C5");
+			isa = PBXGroup;
+			name = "Frameworks";
+			sourceTree = "<group>";
+		};
+		D1C883685E82D5676953459A = {
+			buildActionMask = 2147483647;
+			files = (
+				"1D7D940EB2C439A08BD9A01E",
+				"C3947747999C0637497AB4D9",
+				"2F2C9D3695FD20AE762F6D8A",
+				"A99B2AA0F9CBBDD12BA126A4",
+				"8D267F2E4776F0ECA2F49DC8",
+				"CE4DA5F72ED0FF02A698FF3A",
+				"8771A8C96E9C391044035D99",
+				"E45E51A644D5FC9F942ECE55");
+			isa = PBXFrameworksBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+			name = "Link Binary With Libraries";
+		};
+		30414803F31797EB689AE508 = {
+			buildActionMask = 2147483647;
+			files = (
+				);
+			isa = PBXResourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+			name = "Copy Bundle Resources";
+		};
+		99542592E9780B9225F24AA8 = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1750EFC95B6F5ADA27E7CE57 = {
+			isa = PBXFileReference;
+			includeInIndex = 0;
+			explicitFileType = "wrapper.application";
+			path = "ChineseChessFour.app";
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FE0A091FDBFB3E9C31B7A1BD = {
+			children = (
+				"1750EFC95B6F5ADA27E7CE57");
+			isa = PBXGroup;
+			name = "Products";
+			sourceTree = "<group>";
+		};
+		E8C543AB96796ECAA2E65C57 = {
+			children = (
+				"2EB56BE3C2D93CDAB0C52E67",
+				"25B08E2869634E9BCBA333A2",
+				"87DF60DE337FB58864343E39",
+				"B8254625CFD509ED2A24A166",
+				"12E908B8A1C3C07C115504F5",
+				"74B182DB50CB5611B5C1C297",
+				"AF39DD055C3EF8226FBE929D",
+				"FE0A091FDBFB3E9C31B7A1BD");
+			isa = PBXGroup;
+			name = "ChineseChessFour";
+			sourceTree = "<group>";
+		};
+		E03C78473078AD340648C91D = {
+			buildPhases = (
+				"5E618435888B9D49F8540165",
+				"7EF0942E79C014DCEC8976BC");
+			dependencies = (
+				);
+			buildConfigurationList = 6CC3B5D2136C7CD6A5CF5A59;
+			isa = PBXAggregateTarget;
+			buildRules = (
+);
+			productName = "Qt Preprocess";
+			name = "Qt Preprocess";
+		};
+		B9A1B325A7528689FA7FC1AB = {
+			isa = PBXTargetDependency;
+			target = "E03C78473078AD340648C91D";
+		};
+		288F33AC0420B475687484F0 = {
+			buildPhases = (
+				"F7E50F631C51CD5B5DC0BC43",
+				"D1C883685E82D5676953459A",
+				"30414803F31797EB689AE508",
+				"99542592E9780B9225F24AA8");
+			dependencies = (
+				"B9A1B325A7528689FA7FC1AB");
+			productReference = "1750EFC95B6F5ADA27E7CE57";
+			buildConfigurationList = 6CC3B5D2136C7CD6A5CF5A59;
+			isa = PBXNativeTarget;
+			buildRules = (
+);
+			productType = "com.apple.product-type.application";
+			name = "ChineseChessFour";
+			productName = "ChineseChessFour";
+		};
+		3AA6C32AC930069E80220CF1 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = "NO";
+				"ARCHS[sdk=macosx*]" = "x86_64";
+				COPY_PHASE_STRIP = "NO";
+				ENABLE_BITCODE = "NO";
+				GCC_OPTIMIZATION_LEVEL = "0";
+				ONLY_ACTIVE_ARCH = "YES";
+				PRODUCT_BUNDLE_IDENTIFIER = "x.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "ChineseChessFour";
+				QMAKE_PKGINFO_TYPEINFO = "????";
+				QT_LIBRARY_SUFFIX = "";
+				SDKROOT = "macosx";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				CC = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang";
+				LDPLUSPLUS = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++";
+				INFOPLIST_FILE = "Info.plist";
+				SYMROOT = "/Users/xwy/Desktop/Study/AI/Chess";
+				DYLIB_CURRENT_VERSION = "1.0.0";
+				DYLIB_COMPATIBILITY_VERSION = "1.0";
+				MACOSX_DEPLOYMENT_TARGET = "10.10";
+				HEADER_SEARCH_PATHS = (
+					".",
+					"/usr/local/Cellar/qt/5.10.1/lib/QtWidgets.framework/Headers",
+					"/usr/local/Cellar/qt/5.10.1/lib/QtGui.framework/Headers",
+					"/usr/local/Cellar/qt/5.10.1/lib/QtNetwork.framework/Headers",
+					"/usr/local/Cellar/qt/5.10.1/lib/QtCore.framework/Headers",
+					".",
+					"/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
+					"/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/AGL.framework/Headers",
+					".",
+					"/usr/local/Cellar/qt/5.10.1/mkspecs/macx-clang");
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/Cellar/qt/5.10.1/lib",
+					"/System/Library/Frameworks/");
+				FRAMEWORK_SEARCH_PATHS = (
+					"/usr/local/Cellar/qt/5.10.1/lib",
+					"/usr/local/Cellar/qt/5.10.1/lib");
+				OTHER_CFLAGS = (
+					"-pipe",
+					"-O2",
+					"-Wall",
+					"-W",
+					"-fPIC",
+					"-DQT_DEPRECATED_WARNINGS",
+					"-DQT_NO_DEBUG",
+					"-DQT_WIDGETS_LIB",
+					"-DQT_GUI_LIB",
+					"-DQT_NETWORK_LIB",
+					"-DQT_CORE_LIB");
+				OTHER_CPLUSPLUSFLAGS = (
+					"-pipe",
+					"-stdlib=libc++",
+					"-O2",
+					"-std=gnu++11",
+					"-Wall",
+					"-W",
+					"-fPIC",
+					"-DQT_DEPRECATED_WARNINGS",
+					"-DQT_NO_DEBUG",
+					"-DQT_WIDGETS_LIB",
+					"-DQT_GUI_LIB",
+					"-DQT_NETWORK_LIB",
+					"-DQT_CORE_LIB");
+				OTHER_LDFLAGS = (
+						"-stdlib=libc++",
+						"-headerpad_max_install_names",
+						"-Wl,-rpath,@executable_path/Frameworks",
+						"-F/usr/local/Cellar/qt/5.10.1/lib");
+				ARCHS = "x86_64";
+			};
+			name = "Debug";
+		};
+		77418F46922677BB04ED38DD = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = "NO";
+				"ARCHS[sdk=macosx*]" = "x86_64";
+				COPY_PHASE_STRIP = "NO";
+				ENABLE_BITCODE = "NO";
+				GCC_OPTIMIZATION_LEVEL = "0";
+				ONLY_ACTIVE_ARCH = "YES";
+				PRODUCT_BUNDLE_IDENTIFIER = "x.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "ChineseChessFour";
+				QMAKE_PKGINFO_TYPEINFO = "????";
+				QT_LIBRARY_SUFFIX = "";
+				SDKROOT = "macosx";
+				PRODUCT_NAME = "ChineseChessFour";
+			};
+			name = "Debug";
+		};
+		339EE1B2CC4FC24589A0EA95 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = "NO";
+				"ARCHS[sdk=macosx*]" = "x86_64";
+				COPY_PHASE_STRIP = "NO";
+				ENABLE_BITCODE = "NO";
+				PRODUCT_BUNDLE_IDENTIFIER = "x.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "ChineseChessFour";
+				QMAKE_PKGINFO_TYPEINFO = "????";
+				QT_LIBRARY_SUFFIX = "";
+				SDKROOT = "macosx";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				CC = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang";
+				LDPLUSPLUS = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++";
+				INFOPLIST_FILE = "Info.plist";
+				SYMROOT = "/Users/xwy/Desktop/Study/AI/Chess";
+				DYLIB_CURRENT_VERSION = "1.0.0";
+				DYLIB_COMPATIBILITY_VERSION = "1.0";
+				MACOSX_DEPLOYMENT_TARGET = "10.10";
+				HEADER_SEARCH_PATHS = (
+					".",
+					"/usr/local/Cellar/qt/5.10.1/lib/QtWidgets.framework/Headers",
+					"/usr/local/Cellar/qt/5.10.1/lib/QtGui.framework/Headers",
+					"/usr/local/Cellar/qt/5.10.1/lib/QtNetwork.framework/Headers",
+					"/usr/local/Cellar/qt/5.10.1/lib/QtCore.framework/Headers",
+					".",
+					"/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
+					"/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/AGL.framework/Headers",
+					".",
+					"/usr/local/Cellar/qt/5.10.1/mkspecs/macx-clang");
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/Cellar/qt/5.10.1/lib",
+					"/System/Library/Frameworks/");
+				FRAMEWORK_SEARCH_PATHS = (
+					"/usr/local/Cellar/qt/5.10.1/lib",
+					"/usr/local/Cellar/qt/5.10.1/lib");
+				OTHER_CFLAGS = (
+					"-pipe",
+					"-O2",
+					"-Wall",
+					"-W",
+					"-fPIC",
+					"-DQT_DEPRECATED_WARNINGS",
+					"-DQT_NO_DEBUG",
+					"-DQT_WIDGETS_LIB",
+					"-DQT_GUI_LIB",
+					"-DQT_NETWORK_LIB",
+					"-DQT_CORE_LIB");
+				OTHER_CPLUSPLUSFLAGS = (
+					"-pipe",
+					"-stdlib=libc++",
+					"-O2",
+					"-std=gnu++11",
+					"-Wall",
+					"-W",
+					"-fPIC",
+					"-DQT_DEPRECATED_WARNINGS",
+					"-DQT_NO_DEBUG",
+					"-DQT_WIDGETS_LIB",
+					"-DQT_GUI_LIB",
+					"-DQT_NETWORK_LIB",
+					"-DQT_CORE_LIB");
+				OTHER_LDFLAGS = (
+						"-stdlib=libc++",
+						"-headerpad_max_install_names",
+						"-Wl,-rpath,@executable_path/Frameworks",
+						"-F/usr/local/Cellar/qt/5.10.1/lib");
+				ARCHS = "x86_64";
+			};
+			name = "Release";
+		};
+		6666AA5E688052234F6758D8 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = "NO";
+				"ARCHS[sdk=macosx*]" = "x86_64";
+				COPY_PHASE_STRIP = "NO";
+				ENABLE_BITCODE = "NO";
+				PRODUCT_BUNDLE_IDENTIFIER = "x.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "ChineseChessFour";
+				QMAKE_PKGINFO_TYPEINFO = "????";
+				QT_LIBRARY_SUFFIX = "";
+				SDKROOT = "macosx";
+				PRODUCT_NAME = "ChineseChessFour";
+			};
+			name = "Release";
+		};
+		DAC4C1AA5EDEA1C85E9CA5E6 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				"3AA6C32AC930069E80220CF1",
+				"339EE1B2CC4FC24589A0EA95");
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release";
+		};
+		6CC3B5D2136C7CD6A5CF5A59 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				"77418F46922677BB04ED38DD",
+				"6666AA5E688052234F6758D8");
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release";
+		};
+		6DB9C3763D02B1415CD9D565 = {
+			hasScannedForEncodings = 1;
+			compatibilityVersion = "Xcode 3.2";
+			isa = PBXProject;
+			mainGroup = "E8C543AB96796ECAA2E65C57";
+			productRefGroup = "FE0A091FDBFB3E9C31B7A1BD";
+			buildConfigurationList = "DAC4C1AA5EDEA1C85E9CA5E6";
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"288F33AC0420B475687484F0",
+				"E03C78473078AD340648C91D");
+			attributes = {
+				TargetAttributes = {
+				};
+			};
+		};
+	};
+	rootObject = "6DB9C3763D02B1415CD9D565";
+}
