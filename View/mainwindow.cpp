@@ -92,12 +92,16 @@ MainWindow::~MainWindow()
 
 void MainWindow::refresh()
 {
-    if(*go == true)
+    if(*go != -1)
     {
         QMessageBox::StandardButton reply;
-        reply = QMessageBox::information(this, tr("游戏结束!"), "重新开始？", QMessageBox::Yes | QMessageBox::No);
+        if(*go == 0) reply = QMessageBox::information(this, tr("黑棋获胜!"), "黑棋获胜!重新开始？", QMessageBox::Yes | QMessageBox::No);
+        else reply = QMessageBox::information(this, tr("白棋获胜!"), "白棋获胜!重新开始？", QMessageBox::Yes | QMessageBox::No);
         if (reply == QMessageBox::Yes)
+        {
+            pl = 0;
             newGame();
+        }
         else quitPro();
     }
     else
@@ -205,7 +209,7 @@ void MainWindow::ConnectPossibleMove(std::shared_ptr<PossibleMovePosition> ppmp)
     vcb->ConnectPossibleMove(pmp);
 }
 
-void MainWindow::ConnectGameOver(std::shared_ptr<bool> pgo)
+void MainWindow::ConnectGameOver(std::shared_ptr<int> pgo)
 {
     go = pgo;
 }

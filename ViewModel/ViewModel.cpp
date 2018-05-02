@@ -28,7 +28,7 @@ ViewModel::ViewModel()
 	start_command = make_shared<StartCommand>(this);
 	possible_move_command = make_shared<PossibleMoveCommand>(this);
 	move_command = make_shared<MoveCommand>(this);
-    game_over = make_shared<bool>(false);
+    game_over = make_shared<int>(-1);
 }
 
 void ViewModel::ObserveUpdate()

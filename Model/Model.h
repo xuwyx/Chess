@@ -25,6 +25,7 @@ public:
     bool AI_play[2];
     int difficulty;
 	bool alive[2];
+    int cnt[2]; // 记录棋子数目
 
 	Model()
 	{
@@ -34,9 +35,10 @@ public:
 		for (int i = 0; i < 2; i++)
 		{
 			AI_play[i] = alive[i] = true;
+            cnt[i]=12;
 		}
 		AI_play[0] = false;
-		game_over = false;
+//        game_over = false;
 	}
 
 	~Model(){}
@@ -72,22 +74,21 @@ public:
 
 	void Update()
 	{
-		std::cout << "Update" << std::endl;
 		for (auto i : register_list) i->ObserveUpdate();
 	}
 
 	void RegisterObserver(std::shared_ptr<Observer> ob)
 	{ register_list.push_back(ob); }
     
-    bool GameIsOver();
-
+    int GameIsOver();
+    
+    bool isBlock(int p);
 private:
 	int active_player;
-	bool game_over;
+//    bool game_over;
 
 	std::vector<std::shared_ptr<Observer>> register_list;
 
-	void GameOver();
 };
 
 

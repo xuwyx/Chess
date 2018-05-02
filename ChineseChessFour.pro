@@ -5,7 +5,6 @@
 #-------------------------------------------------
 
 QT       += core gui
-QT       += network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 unix:TARGET = ChineseChessFour
@@ -72,5 +71,3 @@ FORMS    += View/chesspieces.ui \
 
 RESOURCES += \
     pic.qrc \
-    help.qrc \
-    value.qrc

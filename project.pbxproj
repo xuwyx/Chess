@@ -46,21 +46,6 @@
 					);
 			};
 		};
-		BCBBE5B5E1F326F34F2F6B49 = {
-			isa = PBXFileReference;
-			path = "/Users/xwy/Desktop/Study/AI/Chess/TestGame.cpp";
-			name = "TestGame.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		189AF242194E97B8A81FB735 = {
-			fileRef = "BCBBE5B5E1F326F34F2F6B49";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
 		E407960A774B361E03D91D64 = {
 			isa = PBXFileReference;
 			path = "/Users/xwy/Desktop/Study/AI/Chess/control.cpp";
@@ -477,13 +462,6 @@
 			sourceTree = "<absolute>";
 			lastKnownFileType = "sourcecode.c.h";
 		};
-		E1DAE2CB1193193062384058 = {
-			isa = PBXFileReference;
-			path = "/Users/xwy/Desktop/Study/AI/Chess/TestGame.h";
-			name = "TestGame.h";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
 		EE96E213453E3095CF896E1D = {
 			isa = PBXFileReference;
 			path = "/Users/xwy/Desktop/Study/AI/Chess/control.h";
@@ -852,7 +830,6 @@
 			children = (
 				"42BB088932C567DB13CC0E13",
 				"A4B30E53160435FF54AC2092",
-				"BCBBE5B5E1F326F34F2F6B49",
 				"E407960A774B361E03D91D64",
 				"39F5AEF884E0E2D1EAD32E36",
 				"06AF62BB5A554CC624D88C75",
@@ -860,7 +837,6 @@
 				"29C3535835B7FC72FA236B64",
 				"4E342D05C15E3295113AEC61",
 				"452E70EAA0629F038A56F1CC",
-				"E1DAE2CB1193193062384058",
 				"EE96E213453E3095CF896E1D",
 				"1C975D29D1B50010B5D6F4B9",
 				"48090F18B1B6A3DBC9BBB785");
@@ -905,7 +881,6 @@
 			files = (
 				"DF6DFBABA1DAC07E85F4B0A8",
 				"A97C2E669F3584D5C1B1CB29",
-				"189AF242194E97B8A81FB735",
 				"79710C6BDE22D2757591C61C",
 				"9868315564361265892E42E3",
 				"DEE7F1D66FA71F948E4DE546",

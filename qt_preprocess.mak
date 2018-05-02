@@ -47,28 +47,11 @@ qrc_pic.cpp: pic.qrc \
 	/usr/local/Cellar/qt/5.10.1/bin/rcc -name pic pic.qrc -o qrc_pic.cpp
 
 qrc_help.cpp: help.qrc \
-		/usr/local/Cellar/qt/5.10.1/bin/rcc \
-		src/help/rule3.png \
-		src/help/rule2.png \
-		src/help/rule1.png \
-		src/help/rule0.png \
-		src/help/rule4.png
+		/usr/local/Cellar/qt/5.10.1/bin/rcc
 	/usr/local/Cellar/qt/5.10.1/bin/rcc -name help help.qrc -o qrc_help.cpp
 
 qrc_value.cpp: value.qrc \
-		/usr/local/Cellar/qt/5.10.1/bin/rcc \
-		src/value/kongzhi0.txt \
-		src/value/zili0.txt \
-		src/value/jidong0.txt \
-		src/value/zishi1.txt \
-		src/value/zishi0.txt \
-		src/value/kongzhi2.txt \
-		src/value/zili2.txt \
-		src/value/jidong2.txt \
-		src/value/kongzhi1.txt \
-		src/value/zili1.txt \
-		src/value/jidong1.txt \
-		src/value/zishi2.txt
+		/usr/local/Cellar/qt/5.10.1/bin/rcc
 	/usr/local/Cellar/qt/5.10.1/bin/rcc -name value value.qrc -o qrc_value.cpp
 
 compiler_moc_predefs_make_all: moc_predefs.h

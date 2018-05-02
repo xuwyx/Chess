@@ -23,7 +23,7 @@ public:
     void ConnectChessBoard(std::shared_ptr<ChessBoard>);
     void ConnectPossibleMove(std::shared_ptr<PossibleMovePosition>);
     void ConnectOnlineCmd(std::shared_ptr<Command>);
-    void ConnectGameOver(std::shared_ptr<bool>);
+    void ConnectGameOver(std::shared_ptr<int>);
     void ConnectQuitGame(QApplication *a);
     void ObserveUpdate();
     void run();

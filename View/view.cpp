@@ -50,7 +50,7 @@ void View::ConnectPossibleMove(std::shared_ptr<PossibleMovePosition> ppmp)
     w->ConnectPossibleMove(pmp);
 }
 
-void View::ConnectGameOver(std::shared_ptr<bool> pgo)
+void View::ConnectGameOver(std::shared_ptr<int> pgo)
 {
     w->ConnectGameOver(pgo);
 }

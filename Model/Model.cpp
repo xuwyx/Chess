@@ -1,7 +1,3 @@
-//
-// Created by QZQ on 07/07/2017.
-//
-
 #include "Model.h"
 #include "AI.h"
 #include "../ViewModel/ViewModel.h"
@@ -12,10 +8,6 @@
 #include <cstring>
 
 using namespace std;
-
-//Model model;
-//AI ai;
-//extern ViewModel view_model;
 
 extern bool AtHome(int player, int x, int y);
 
@@ -30,37 +22,34 @@ bool Model::EndGame()
 	cout << "Game Over" << endl;
 	return true;
 }
-bool Model::GameIsOver(){
-    return !(alive[0] && alive[1]);
+int Model::GameIsOver(){
+    if(alive[0] && alive[1]) return -1;
+    else if(alive[0]) return 0;
+    else return 1;
 }
 
 void Model::KillPlayer(int player)
 {
 	int dead_color = player;
 	alive[dead_color] = false;
-//    for (int i = 0; i < 19; i++)
-//        for (int j = 0; j < 19; j++)
-//        {
-//            if (chess_board->chess[i][j] == dead_color)
-//            {
-//                chess_board->chess[i][j] = ChessBoard::EMPTY;
-//            }
-//        }
-	GameOver();
+//    cout << "Game Over!" << endl;
+    Update();
 }
 
 bool Model::StartGame(int x0, int x1)
 {
+    cout << "Initialize chess board" << endl;
 //	set human player first
 	chess_board->initialize();
 	for (int i = 0; i < 2; i++)
 	{
 		AI_play[i] = alive[i] = true;
+        cnt[i] = 12;
 	}
 	AI_play[0] = x0;
     AI_play[1] = ~x0;
     difficulty = x1;
-	game_over = false;
+//    game_over = false;
 
 	active_player = 0;
     
@@ -77,17 +66,83 @@ bool Model::IsValidMove(int player, int start_x, int start_y, int end_x, int end
 	return true;
 }
 
-void Model::GameOver()
-{
-	cout << "Game Over!" << endl;
-	Update();
+bool Model::isBlock(int p){
+    int pic[8][8]={};
+    int tag[15]={};
+    int blk = 0;
+    for(int i = 0; i < 8; i++){
+        for(int j = 0; j < 8; j++){
+            if(chess_board->chess[i][j]==p){
+                int m = 15;
+                if(i-1>=0&&j-1>=0&&pic[i-1][j-1]!=0){
+                    m = min(pic[i-1][j-1],m);
+                    pic[i][j] = m;
+                }
+                if(i-1>=0&&pic[i-1][j]!=0){
+                    if(m == 15 || m == pic[i-1][j]){
+                        m = pic[i-1][j];
+                        pic[i][j] = m;
+                    }
+                    else{
+                        pic[i][j] = m;
+                        tag[pic[i-1][j]] = min(tag[pic[i-1][j]], m);
+                    }
+                }
+                if(i-1>=0&&j+1<8&&pic[i-1][j+1]!=0){
+                    if(m == 15 || m == pic[i-1][j+1]){
+                        m = pic[i-1][j+1];
+                        pic[i][j] = m;
+                    }
+                    else{
+                        pic[i][j] = m;
+                        tag[pic[i-1][j+1]] = min(tag[pic[i-1][j+1]], m);
+                    }
+                }
+                if(j-1>=0&&pic[i][j-1]!=0){
+                    if(m == 15 || m == pic[i][j-1]){
+                        m = pic[i][j-1];
+                        pic[i][j] = m;
+                    }
+                    else{
+                        pic[i][j] = m;
+                        tag[pic[i][j-1]] = min(tag[pic[i][j-1]], m);
+                    }
+                }
+                if(m == 15){
+                    blk++;
+                    pic[i][j]=blk;
+                    tag[blk]=blk;
+                }
+            }
+        }
+    }
+    for(int i = 1; i <= blk; i++){
+        tag[i] = tag[tag[i]];
+        if(tag[i]!=1) return false;
+    }
+    return true;
 }
 
 void Model::MoveChessPiece(int sx, int sy, int ex, int ey)
 {
-//    if (chess_board->chess[ex][ey] == ChessPiece::Jiang) KillPlayer(chess_board->chess[ex][ey].color);
+    int p = chess_board->chess[sx][sy];
+    if(chess_board->chess[ex][ey] == !p) cnt[!p]--;
 	chess_board->chess[ex][ey] = chess_board->chess[sx][sy];
 	chess_board->chess[sx][sy] = -1;
+    // 吃到只剩一枚敌方棋子
+    if(cnt[!p]==1){
+        KillPlayer(!p);
+        return;
+    }
+    // 集合在一起
+    if(isBlock(p)){
+        KillPlayer(!p);
+        return;
+    }
+    if(isBlock(!p)){
+        KillPlayer(p);
+        return;
+    }
 }
 
 bool Model::PlayerMoveChessPiece(int player, int start_x, int start_y, int end_x, int end_y)
@@ -116,18 +171,17 @@ bool Model::PlayerMoveChessPiece(int player, int start_x, int start_y, int end_x
 		return false;
 	}
 	auto M = GenerateMove(player, start_x, start_y, chess_board);
-	printf("generated possible moves(%d, %d, %d):\n", player, start_x, start_y);
-	for (auto i : M) cout << i.first << ' ' << i.second << endl;
+//    printf("generated possible moves(%d, %d, %d):\n", player, start_x, start_y);
+//    for (auto i : M) cout << i.first << ' ' << i.second << endl;
 	if (find(M.begin(), M.end(), pair<int, int>(end_x, end_y)) == M.end())
 	{
 		cout << "Invalid human move." << endl;
 		return false;
 	}
+    active_player++;
+    active_player %= 2;
 	MoveChessPiece(start_x, start_y, end_x, end_y);
-
-	active_player++;
-	active_player %= 2;
-	Update();
+    Update();
     AIPlay();
     return true;
 }
@@ -138,6 +192,7 @@ void Model::AIPlay()
 	{
 		if (alive[active_player])
 		{
+            cout << "AI" << endl;
             tuple<int, int, int, int> mv = c_AI->getMove(chess_board, active_player, difficulty);
 			if (get<0>(mv) == -1)
 			{
@@ -148,16 +203,16 @@ void Model::AIPlay()
 			}
 			else MoveChessPiece(get<0>(mv), get<1>(mv), get<2>(mv), get<3>(mv));
 		}
-        Update();
 		active_player++;
 		active_player %= 2;
+        Update();
 	}
 }
 
 bool Model::PossibleMove(int player, int x, int y)
 {
     *(this->possible_move_pos) = move(GenerateMove(player, x, y, chess_board));
-	for (auto i : *possible_move_pos) cout << i.first << ' '  << i.second << endl;
+//    for (auto i : *possible_move_pos) cout << i.first << ' '  << i.second << endl;
 	Update();
     return this->possible_move_pos->size() > 0;
 }
@@ -167,6 +222,7 @@ PossibleMovePosition Model::GenerateMove(int player, int x, int y, shared_ptr<Ch
 	vector<pair<int, int>> ret;
 	pair<int, int> tp;
     int v=0, h=0, l=0, r=0;
+    if(chess_board->chess[x][y]!=player) return ret;
     for (int i = 0; i < 8; i++) {
         if(chess_board->chess[i][y]!=ChessBoard::EMPTY) v++;
         if(chess_board->chess[x][i]!=ChessBoard::EMPTY) h++;

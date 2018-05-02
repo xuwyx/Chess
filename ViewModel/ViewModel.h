@@ -20,7 +20,7 @@ class AI;
 class ViewModel : public Observer
 {
 public:
-    std::shared_ptr<bool> game_over;
+    std::shared_ptr<int> game_over;
     std::shared_ptr<Command> start_command, move_command, possible_move_command;
 	std::shared_ptr<ChessBoard> chess_board;
 //    std::vector<std::pair<int, int>> possible_move_pos;
@@ -33,18 +33,8 @@ public:
 		std::cout << "dstc ViewModel" << std::endl;
 	}
 
-//	void f(Command *c)
-//	{
-//		possible_move_pos.clear();
-//		c->execute();
-//		Update();
-//	}
-
-
-
 	void Update()
 	{
-		std::cout << "Update" << std::endl;
 		for (auto i : register_list) i->ObserveUpdate();
 	}
 

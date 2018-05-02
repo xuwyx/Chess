@@ -38,7 +38,7 @@ public:
 //    void ConnectOnlineCmd(std::shared_ptr<Command>);
     void ConnectChessBoard(std::shared_ptr<ChessBoard>);
     void ConnectPossibleMove(std::shared_ptr<PossibleMovePosition>);
-    void ConnectGameOver(std::shared_ptr<bool>);
+    void ConnectGameOver(std::shared_ptr<int>);
     void ConnectQuitGame(QApplication *a);
 
 private slots:
@@ -59,7 +59,7 @@ private:
     std::shared_ptr<Command> sc,mc,cc,oc;
     std::shared_ptr<ChessBoard> cb;
     std::shared_ptr<PossibleMovePosition> pmp;
-    std::shared_ptr<bool> go;
+    std::shared_ptr<int> go;
 
     QMenu *Game, *Option, *ChangeChessBoard, *Help;
     QAction *New, *Quit, *ChangeChessBoardToWood, *ChangeChessBoardToStarry, *ChangeChessBoardToBeach,
