@@ -62,6 +62,8 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     Author->setShortcut(QKeySequence("Ctrl+A"));
     Help->addAction(Author);
     ui->menuBar->addMenu(Help);}
+    
+    TimeLabel = new QLabel("60", this);
 
     connect(New,SIGNAL(triggered()),this,SLOT(newGame()));
     connect(Quit,SIGNAL(triggered()),this,SLOT(quitPro()));
@@ -93,8 +95,9 @@ MainWindow::~MainWindow()
 
 void MainWindow::refresh()
 {
-    if(*go != -1)
+    if(*go == 0 || *go == 1)
     {
+        std::cout << "go:" << *go << endl;
         QMessageBox::StandardButton reply;
         if(*go == 0) reply = QMessageBox::information(this, tr("黑棋获胜!"), "黑棋获胜!重新开始？", QMessageBox::Yes | QMessageBox::No);
         else reply = QMessageBox::information(this, tr("白棋获胜!"), "白棋获胜!重新开始？", QMessageBox::Yes | QMessageBox::No);
@@ -107,6 +110,7 @@ void MainWindow::refresh()
     }
     else
     {
+        TimeLabel->setText(QString::number((*time)));
         vcb->repaint();
         cp->repaint();
     }
@@ -213,6 +217,11 @@ void MainWindow::ConnectPossibleMove(std::shared_ptr<PossibleMovePosition> ppmp)
 void MainWindow::ConnectGameOver(std::shared_ptr<int> pgo)
 {
     go = pgo;
+}
+
+void MainWindow::ConnectTimer(std::shared_ptr<int> t)
+{
+    time = t;
 }
 
 void MainWindow::ConnectQuitGame(QApplication *a)

@@ -39,6 +39,7 @@ public:
     void ConnectChessBoard(std::shared_ptr<ChessBoard>);
     void ConnectPossibleMove(std::shared_ptr<PossibleMovePosition>);
     void ConnectGameOver(std::shared_ptr<int>);
+    void ConnectTimer(std::shared_ptr<int>);
     void ConnectQuitGame(QApplication *a);
 
 private slots:
@@ -60,10 +61,12 @@ private:
     std::shared_ptr<ChessBoard> cb;
     std::shared_ptr<PossibleMovePosition> pmp;
     std::shared_ptr<int> go;
+    std::shared_ptr<int> time;
 
     QMenu *Game, *Option, *ChangeChessBoard, *Help;
     QAction *New, *Quit, *ChangeChessBoardToWood, *ChangeChessBoardToStarry, *ChangeChessBoardToBeach,
             *ChangeChessBoardToRandom, *PK, *Rule, *Author;
+    QLabel *TimeLabel;
     QApplication *QApp;
 //    bool online;
     int pl, difficuly;

@@ -11,9 +11,8 @@
 #include <iostream>
 #include "AI.h"
 #include "../Observer.h"
-#include <QtNetwork/QTcpSocket>
 #include <memory>
-
+#include <QTimer>
 
 class Model : public QObject
 {
@@ -22,6 +21,7 @@ public:
 	std::shared_ptr<ChessBoard> chess_board;
 	std::shared_ptr<PossibleMovePosition> possible_move_pos;
 	std::shared_ptr<AI> c_AI;
+    std::shared_ptr<int> time;
     bool AI_play[2];
     int difficulty;
 	bool alive[2];
@@ -32,6 +32,8 @@ public:
 		possible_move_pos = std::make_shared<PossibleMovePosition>();
 		chess_board = std::make_shared<ChessBoard>();
 		c_AI = std::make_shared<AI>();
+        time = std::make_shared<int>();
+        *time = 60;
 		for (int i = 0; i < 2; i++)
 		{
 			AI_play[i] = alive[i] = true;
@@ -80,10 +82,12 @@ public:
     int GameIsOver();
     
     bool isBlock(int p);
+private slots:
+    void timeLimit();
 private:
 	int active_player;
 //    bool game_over;
-
+    QTimer * timer;
 	std::vector<std::shared_ptr<Observer>> register_list;
 
 };

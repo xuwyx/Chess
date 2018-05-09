@@ -5,6 +5,7 @@
 #include <utility>
 #include <algorithm>
 #include <vector>
+#include <QTimer>
 #include <cstring>
 
 using namespace std;
@@ -42,13 +43,25 @@ bool Model::StartGame(int x0, int x1)
 	AI_play[0] = x0;
     AI_play[1] = !x0;
     difficulty = x1;
-//    game_over = false;
-
+    timer = new QTimer(this);
+    connect(timer, SIGNAL(timeout()), this, SLOT(timeLimit()));
+    timer->start( 1000 );
 	active_player = 0;
-    
+    *time = 60;
 	AIPlay();
 	Update();
 	return true;
+}
+
+void Model::timeLimit(){
+    if(GameIsOver() == -1 && (*time) > 0){
+        (*time)--;
+        Update();
+    }
+    else if(GameIsOver() == -1 &&(*time)==0){
+        timer->stop();
+        KillPlayer(active_player);
+    }
 }
 
 bool Model::IsValidMove(int player, int start_x, int start_y, int end_x, int end_y)
@@ -172,6 +185,7 @@ bool Model::PlayerMoveChessPiece(int player, int start_x, int start_y, int end_x
     active_player++;
     active_player %= 2;
 	MoveChessPiece(start_x, start_y, end_x, end_y);
+    *time = 60;
     Update();
     AIPlay();
     return true;
@@ -195,6 +209,7 @@ void Model::AIPlay()
 		}
 		active_player++;
 		active_player %= 2;
+        *time = 60;
         Update();
 	}
 }

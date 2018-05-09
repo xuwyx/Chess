@@ -55,6 +55,11 @@ void View::ConnectGameOver(std::shared_ptr<int> pgo)
     w->ConnectGameOver(pgo);
 }
 
+void View::ConnectTimer(std::shared_ptr<int> t)
+{
+    w->ConnectTimer(t);
+}
+
 void View::ConnectQuitGame(QApplication *a)
 {
     w->ConnectQuitGame(a);

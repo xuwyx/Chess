@@ -18,6 +18,7 @@ Control::Control(QApplication *a)
     v->ConnectChessBoard(vm->chess_board);
     v->ConnectPossibleMove(vm->possible_move_pos);
     v->ConnectGameOver(vm->game_over);
+    v->ConnectTimer(vm->time);
     v->ConnectQuitGame(a);
 
     v->run();

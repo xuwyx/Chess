@@ -1,7 +1,3 @@
-//
-// Created by QZQ on 07/07/2017.
-//
-
 #include "ViewModel.h"
 #include "Commands/MoveCommand.h"
 #include "Commands/PossibleMoveCommand.h"
@@ -21,6 +17,7 @@ void ViewModel::ConnectModel(shared_ptr<Model> model)
 	c_model = model;
 	chess_board = model->chess_board;
 	possible_move_pos = model->possible_move_pos;
+    time = model->time;
 }
 
 ViewModel::ViewModel()
@@ -34,6 +31,7 @@ ViewModel::ViewModel()
 void ViewModel::ObserveUpdate()
 {
     *game_over = c_model->GameIsOver();
-	Update();
+//    cout << "viewmodel:" << *time << endl;
+    Update();
 }
 
