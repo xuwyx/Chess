@@ -5,7 +5,7 @@ M1_welcome::M1_welcome(QWidget *parent) : QWidget(parent), ui(new Ui::M1_welcome
 {
     ui->setupUi(this);
 
-    setGeometry(0,0,QApplication::desktop()->width()*225/683,QApplication::desktop()->width()*5/32);
+    setGeometry(0,0,QApplication::desktop()->width()*300/683,QApplication::desktop()->width()*5/32);
     move((QApplication::desktop()->width() - width())/2, (QApplication::desktop()->height() - height())/2);
     setWindowFlags(Qt::FramelessWindowHint);
     setAttribute(Qt::WA_TranslucentBackground, true);

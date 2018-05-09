@@ -10,6 +10,8 @@ int plChange(int pl)
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow)
 {
+    QDesktopWidget* desktop = QApplication::desktop();
+    setMinimumSize(500*desktop->width()/683, 25*desktop->height()/32+23);
     ui->setupUi(this);
     hide();
 
@@ -18,7 +20,6 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     pmp = NULL;
     pl = 0; difficuly = 0;
 
-    QDesktopWidget* desktop = QApplication::desktop();
     setGeometry(0,0,500*desktop->width()/683, 25*desktop->height()/32+23);
     move((desktop->width() - width())/2, (desktop->height() - height())/2);
     setWindowTitle("Chess");
@@ -153,7 +154,7 @@ void MainWindow::pkMode()
     a->getMode(pl,difficuly);
     a->hide();
     //send command
-    newGame();
+//    newGame();
 }
 
 void MainWindow::authorInfo()

@@ -5,7 +5,6 @@
 getPKMode::getPKMode(QWidget *parent) : QWidget(parent), ui(new Ui::getPKMode)
 {
     ui->setupUi(this);
-
     hide();
     setParent(parent);
     setWindowFlags(Qt::WindowTitleHint);
@@ -14,9 +13,9 @@ getPKMode::getPKMode(QWidget *parent) : QWidget(parent), ui(new Ui::getPKMode)
     setWindowFlags(Qt::WindowStaysOnTopHint);
     setWindowFlags(windowFlags() &~ Qt::WindowCloseButtonHint);
 
-    setGeometry(0,0,parent->width()/2,2*(parent->height()-23)/3);
-    move((parent->width()-width())/2, (parent->height()-height())/2);
-
+//    setGeometry(0,0,parent->width()/2,2*(parent->height()-23)/3);
+//    move((parent->width()-width())/2, (parent->height()-height())/2);
+//
     bt1.setParent(this);
     bt1.setText("先手");
     bt1.setGeometry(width()/4, height()*9/10, width()/4, height()/10);
@@ -26,9 +25,8 @@ getPKMode::getPKMode(QWidget *parent) : QWidget(parent), ui(new Ui::getPKMode)
     bt2.setText("后手");
     bt2.setGeometry(width()*3/4, height()*9/10, width()/4, height()/10);
     connect(&bt2,SIGNAL(clicked()),this,SLOT(second()));
-    chosen = 1;
+    chosen = 0;
     show();
-
 }
 
 getPKMode::~getPKMode()
@@ -55,9 +53,11 @@ void getPKMode::getMode(int &a, int &b)
 void getPKMode::first()
 {
     chosen = 1;
+    hide();
 }
 
 void getPKMode::second()
 {
     chosen = 2;
+    hide();
 }

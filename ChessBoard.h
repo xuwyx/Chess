@@ -34,10 +34,10 @@ public:
 			}
 		}
         for(int i = 1; i <= 6; i++){
-            chess[0][i] = WHITE;
-            chess[7][i] = WHITE;
-            chess[i][0] = BLACK;
-            chess[i][7] = BLACK;
+            chess[0][i] = BLACK;
+            chess[7][i] = BLACK;
+            chess[i][0] = WHITE;
+            chess[i][7] = WHITE;
         }
 	}
 };

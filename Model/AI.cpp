@@ -182,44 +182,116 @@ std::vector<std::pair<int, int>> AI::GenerateMove(int player, int x, int y, int 
         y1++;
     }
     if(x + v < 8 && tcb[x+v][y]!=player) {
-        tp.first = x + v;
-        tp.second = y;
-        ret.push_back(tp);
+        bool flag = true;
+        for(int i = 1; i < v; i++){
+            if(tcb[x+i][y]==!player){
+                flag = false;
+                break;
+            }
+        }
+        if(flag){
+            tp.first = x + v;
+            tp.second = y;
+            ret.push_back(tp);
+        }
     }
     if(x - v >= 0 && tcb[x-v][y]!=player) {
-        tp.first = x - v;
-        tp.second = y;
-        ret.push_back(tp);
+        bool flag = true;
+        for(int i = 1; i < v; i++){
+            if(tcb[x-i][y]==!player){
+                flag = false;
+                break;
+            }
+        }
+        if(flag){
+            tp.first = x - v;
+            tp.second = y;
+            ret.push_back(tp);
+        }
     }
     if(y + h < 8 && tcb[x][y+h]!=player) {
-        tp.first = x;
-        tp.second = y + h;
-        ret.push_back(tp);
+        bool flag = true;
+        for(int i = 1; i < h; i++){
+            if(tcb[x][y+i]==!player){
+                flag = false;
+                break;
+            }
+        }
+        if(flag){
+            tp.first = x;
+            tp.second = y + h;
+            ret.push_back(tp);
+        }
     }
     if(y - h >= 0 && tcb[x][y-h]!=player) {
-        tp.first = x;
-        tp.second = y - h;
-        ret.push_back(tp);
+        bool flag = true;
+        for(int i = 1; i < h; i++){
+            if(tcb[x][y-i]==!player){
+                flag = false;
+                break;
+            }
+        }
+        if(flag){
+            tp.first = x;
+            tp.second = y - h;
+            ret.push_back(tp);
+        }
     }
     if(y + l < 8 && x + l < 8 && tcb[x+l][y+l]!=player) {
-        tp.first = x + l;
-        tp.second = y + l;
-        ret.push_back(tp);
+        bool flag = true;
+        for(int i = 1; i < l; i++){
+            if(tcb[x+i][y+i]==!player){
+                flag = false;
+                break;
+            }
+        }
+        if(flag){
+            tp.first = x + l;
+            tp.second = y + l;
+            ret.push_back(tp);
+        }
     }
     if(y - l >= 0 && x - l >= 0 && tcb[x-l][y-l]!=player) {
-        tp.first = x - l;
-        tp.second = y - l;
-        ret.push_back(tp);
+        bool flag = true;
+        for(int i = 1; i < l; i++){
+            if(tcb[x-i][y-i]==!player){
+                flag = false;
+                break;
+            }
+        }
+        if(flag){
+            tp.first = x - l;
+            tp.second = y - l;
+            ret.push_back(tp);
+        }
     }
     if(x - r >= 0 && y + r < 8 && tcb[x-r][y+r]!=player) {
-        tp.first = x - r;
-        tp.second = y + r;
-        ret.push_back(tp);
+        bool flag = true;
+        for(int i = 1; i < r; i++){
+            if(tcb[x-i][y+i]==!player){
+                flag = false;
+                break;
+            }
+        }
+        if(flag){
+            tp.first = x - r;
+            tp.second = y + r;
+            ret.push_back(tp);
+        }
     }
     if(x + r < 8 && y - r >= 0 && tcb[x+r][y-r]!=player) {
-        tp.first = x + r;
-        tp.second = y - r;
-        ret.push_back(tp);
+        bool flag = true;
+        for(int i = 1; i < r; i++){
+            if(tcb[x+i][y-i]==!player){
+                flag = false;
+                break;
+            }
+        }
+        if(flag){
+            tp.first = x + r;
+            tp.second = y - r;
+            ret.push_back(tp);
+        }
     }
     return ret;
 }

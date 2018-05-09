@@ -17,11 +17,6 @@ extern bool AtOwnSide(int player, int x, int y);
 
 extern bool AtOwnSide(int player, int x, int y);
 
-bool Model::EndGame()
-{
-	cout << "Game Over" << endl;
-	return true;
-}
 int Model::GameIsOver(){
     if(alive[0] && alive[1]) return -1;
     else if(alive[0]) return 0;
@@ -32,22 +27,20 @@ void Model::KillPlayer(int player)
 {
 	int dead_color = player;
 	alive[dead_color] = false;
-//    cout << "Game Over!" << endl;
     Update();
 }
 
 bool Model::StartGame(int x0, int x1)
 {
-    cout << "Initialize chess board" << endl;
 //	set human player first
 	chess_board->initialize();
 	for (int i = 0; i < 2; i++)
 	{
-		AI_play[i] = alive[i] = true;
+		alive[i] = true;
         cnt[i] = 12;
 	}
 	AI_play[0] = x0;
-    AI_play[1] = ~x0;
+    AI_play[1] = !x0;
     difficulty = x1;
 //    game_over = false;
 
@@ -171,8 +164,6 @@ bool Model::PlayerMoveChessPiece(int player, int start_x, int start_y, int end_x
 		return false;
 	}
 	auto M = GenerateMove(player, start_x, start_y, chess_board);
-//    printf("generated possible moves(%d, %d, %d):\n", player, start_x, start_y);
-//    for (auto i : M) cout << i.first << ' ' << i.second << endl;
 	if (find(M.begin(), M.end(), pair<int, int>(end_x, end_y)) == M.end())
 	{
 		cout << "Invalid human move." << endl;
@@ -192,7 +183,6 @@ void Model::AIPlay()
 	{
 		if (alive[active_player])
 		{
-            cout << "AI" << endl;
             tuple<int, int, int, int> mv = c_AI->getMove(chess_board, active_player, difficulty);
 			if (get<0>(mv) == -1)
 			{
@@ -255,44 +245,116 @@ PossibleMovePosition Model::GenerateMove(int player, int x, int y, shared_ptr<Ch
         y1++;
     }
     if(x + v < 8 && chess_board->chess[x+v][y]!=player) {
-        tp.first = x + v;
-        tp.second = y;
-        ret.push_back(tp);
+        bool flag = true;
+        for(int i = 1; i < v; i++){
+            if(chess_board->chess[x+i][y]==!player){
+                flag = false;
+                break;
+            }
+        }
+        if(flag){
+            tp.first = x + v;
+            tp.second = y;
+            ret.push_back(tp);
+        }
     }
     if(x - v >= 0 && chess_board->chess[x-v][y]!=player) {
-        tp.first = x - v;
-        tp.second = y;
-        ret.push_back(tp);
+        bool flag = true;
+        for(int i = 1; i < v; i++){
+            if(chess_board->chess[x-i][y]==!player){
+                flag = false;
+                break;
+            }
+        }
+        if(flag){
+            tp.first = x - v;
+            tp.second = y;
+            ret.push_back(tp);
+        }
     }
     if(y + h < 8 && chess_board->chess[x][y+h]!=player) {
-        tp.first = x;
-        tp.second = y + h;
-        ret.push_back(tp);
+        bool flag = true;
+        for(int i = 1; i < h; i++){
+            if(chess_board->chess[x][y+i]==!player){
+                flag = false;
+                break;
+            }
+        }
+        if(flag){
+            tp.first = x;
+            tp.second = y + h;
+            ret.push_back(tp);
+        }
     }
     if(y - h >= 0 && chess_board->chess[x][y-h]!=player) {
-        tp.first = x;
-        tp.second = y - h;
-        ret.push_back(tp);
+        bool flag = true;
+        for(int i = 1; i < h; i++){
+            if(chess_board->chess[x][y-i]==!player){
+                flag = false;
+                break;
+            }
+        }
+        if(flag){
+            tp.first = x;
+            tp.second = y - h;
+            ret.push_back(tp);
+        }
     }
     if(y + l < 8 && x + l < 8 && chess_board->chess[x+l][y+l]!=player) {
-        tp.first = x + l;
-        tp.second = y + l;
-        ret.push_back(tp);
+        bool flag = true;
+        for(int i = 1; i < l; i++){
+            if(chess_board->chess[x+i][y+i]==!player){
+                flag = false;
+                break;
+            }
+        }
+        if(flag){
+            tp.first = x + l;
+            tp.second = y + l;
+            ret.push_back(tp);
+        }
     }
     if(y - l >= 0 && x - l >= 0 && chess_board->chess[x-l][y-l]!=player) {
-        tp.first = x - l;
-        tp.second = y - l;
-        ret.push_back(tp);
+        bool flag = true;
+        for(int i = 1; i < l; i++){
+            if(chess_board->chess[x-i][y-i]==!player){
+                flag = false;
+                break;
+            }
+        }
+        if(flag){
+            tp.first = x - l;
+            tp.second = y - l;
+            ret.push_back(tp);
+        }
     }
     if(x - r >= 0 && y + r < 8 && chess_board->chess[x-r][y+r]!=player) {
-        tp.first = x - r;
-        tp.second = y + r;
-        ret.push_back(tp);
+        bool flag = true;
+        for(int i = 1; i < r; i++){
+            if(chess_board->chess[x-i][y+i]==!player){
+                flag = false;
+                break;
+            }
+        }
+        if(flag){
+            tp.first = x - r;
+            tp.second = y + r;
+            ret.push_back(tp);
+        }
     }
     if(x + r < 8 && y - r >= 0 && chess_board->chess[x+r][y-r]!=player) {
-        tp.first = x + r;
-        tp.second = y - r;
-        ret.push_back(tp);
+        bool flag = true;
+        for(int i = 1; i < r; i++){
+            if(chess_board->chess[x+i][y-i]==!player){
+                flag = false;
+                break;
+            }
+        }
+        if(flag){
+            tp.first = x + r;
+            tp.second = y - r;
+            ret.push_back(tp);
+        }
     }
 	return ret;
 }

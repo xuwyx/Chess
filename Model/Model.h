@@ -56,9 +56,6 @@ public:
 
 	void KillPlayer(int player);
 
-//	not complete
-	bool EndGame();
-
 //	only local human player call this function
 	bool PlayerMoveChessPiece(int player, int start_x, int start_y, int end_x, int end_y);
 
