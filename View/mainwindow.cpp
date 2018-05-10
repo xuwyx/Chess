@@ -1,12 +1,5 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include<QDebug>
-
-int plChange(int pl)
-{
-    if(pl == 2) return -1;
-    return pl;
-}
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow)
 {
@@ -18,7 +11,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     sc = mc = cc = NULL;
     cb = NULL;
     pmp = NULL;
-    pl = 0; difficuly = 0;
+    pl = 0; difficulty = 0;
 
     setGeometry(0,0,500*desktop->width()/683, 25*desktop->height()/32+23);
     move((desktop->width() - width())/2, (desktop->height() - height())/2);
@@ -97,7 +90,6 @@ void MainWindow::refresh()
 {
     if(*go == 0 || *go == 1)
     {
-        std::cout << "go:" << *go << endl;
         QMessageBox::StandardButton reply;
         if(*go == 0) reply = QMessageBox::information(this, tr("黑棋获胜!"), "黑棋获胜!重新开始？", QMessageBox::Yes | QMessageBox::No);
         else reply = QMessageBox::information(this, tr("白棋获胜!"), "白棋获胜!重新开始？", QMessageBox::Yes | QMessageBox::No);
@@ -119,7 +111,7 @@ void MainWindow::refresh()
 void MainWindow::newGame()
 {
     std::vector<int> vi(2);
-    vi[0] = pl; vi[1] = difficuly;
+    vi[0] = pl; vi[1] = difficulty;
     std::shared_ptr<Any> param = std::make_shared<Any>();
     *param = vi;
     sc->param = param;
@@ -155,10 +147,8 @@ void MainWindow::pkMode()
 {
     std::shared_ptr<getPKMode> a(new getPKMode(QApplication::desktop()));
 
-    a->getMode(pl,difficuly);
+    a->getMode(pl,difficulty);
     a->hide();
-    //send command
-//    newGame();
 }
 
 void MainWindow::authorInfo()

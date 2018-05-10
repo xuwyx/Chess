@@ -20,7 +20,7 @@
 class ViewModel;
 
 namespace Ui {
-class MainWindow;
+    class MainWindow;
 }
 
 class MainWindow : public QMainWindow
@@ -35,7 +35,6 @@ public:
     void ConnectStartCmd(std::shared_ptr<Command>);
     void ConnectMoveCmd(std::shared_ptr<Command>);
     void ConnectChooseCmd(std::shared_ptr<Command>);
-//    void ConnectOnlineCmd(std::shared_ptr<Command>);
     void ConnectChessBoard(std::shared_ptr<ChessBoard>);
     void ConnectPossibleMove(std::shared_ptr<PossibleMovePosition>);
     void ConnectGameOver(std::shared_ptr<int>);
@@ -51,7 +50,6 @@ private slots:
     void changeBackGroundRandom();
     void pkMode();
     void authorInfo();
-//    void onlineGame();
 
 private:
     Ui::MainWindow *ui;
@@ -68,8 +66,7 @@ private:
             *ChangeChessBoardToRandom, *PK, *Rule, *Author;
     QLabel *TimeLabel;
     QApplication *QApp;
-//    bool online;
-    int pl, difficuly;
+    int pl, difficulty;
 };
 
 #endif // MAINWINDOW_H

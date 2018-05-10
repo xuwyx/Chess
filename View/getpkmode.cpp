@@ -1,6 +1,5 @@
 #include "getpkmode.h"
 #include "ui_getpkmode.h"
-#include <QDebug>
 
 getPKMode::getPKMode(QWidget *parent) : QWidget(parent), ui(new Ui::getPKMode)
 {
@@ -13,9 +12,6 @@ getPKMode::getPKMode(QWidget *parent) : QWidget(parent), ui(new Ui::getPKMode)
     setWindowFlags(Qt::WindowStaysOnTopHint);
     setWindowFlags(windowFlags() &~ Qt::WindowCloseButtonHint);
 
-//    setGeometry(0,0,parent->width()/2,2*(parent->height()-23)/3);
-//    move((parent->width()-width())/2, (parent->height()-height())/2);
-//
     bt1.setParent(this);
     bt1.setText("先手");
     bt1.setGeometry(width()/4, height()*9/10, width()/4, height()/10);

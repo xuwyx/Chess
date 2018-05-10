@@ -1,17 +1,11 @@
-//
-// Created by QZQ on 07/07/2017.
-//
-
 #ifndef CHINESECHESS_MODEL_H
 #define CHINESECHESS_MODEL_H
-
 
 #include "../ChessBoard.h"
 #include "../possiblemoveposition.h"
 #include <iostream>
 #include "AI.h"
 #include "../Observer.h"
-#include <memory>
 #include <QTimer>
 
 class Model : public QObject

@@ -1,12 +1,4 @@
 #include "Model.h"
-#include "AI.h"
-#include "../ViewModel/ViewModel.h"
-#include "../View/sleep.h"
-#include <utility>
-#include <algorithm>
-#include <vector>
-#include <QTimer>
-#include <cstring>
 
 using namespace std;
 
